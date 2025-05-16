@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/editMaterialName"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:hint="材料名称"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/editMaterialPrice"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="价格"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+    <ImageButton
+        android:id="@+id/buttonDeleteMaterial"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_delete"
+        android:contentDescription="删除" />
+</LinearLayout>

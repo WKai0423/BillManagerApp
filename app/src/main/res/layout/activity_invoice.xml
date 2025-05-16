@@ -1,0 +1,125 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_backgrond"
+            android:hint="@string/et_date"
+            android:padding="16dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="none"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_customer"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="#DDDDDD"
+            android:clickable="true"
+            android:focusable="true" />
+
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_backgrond"
+            android:hint="@string/et_cnName"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_backgrond"
+            android:hint="@string/et_cnPhone"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_backgrond"
+            android:hint="@string/et_cnAddress"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/buttonSelectServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选择服务项目"
+            android:textSize="20sp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/textSelectedServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_service"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"/>
+
+        <Button
+            android:id="@+id/buttonAddMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_material"
+            android:textSize="20sp"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/editTextMaterialCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_material"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="#DDDDDD"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <EditText
+            android:id="@+id/editTextNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_backgrond"
+            android:hint="@string/et_note"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:text="@string/btn_save" />
+
+        <Button
+            android:id="@+id/buttonIntent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:padding="16dp"
+            android:text="@string/btn_intent"/>
+
+    </LinearLayout>
+</ScrollView>

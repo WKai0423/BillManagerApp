@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_app_name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 开新账单 -->
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_invoice"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 查看账单列表 -->
+        <Button
+            android:id="@+id/btn_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_intent"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 添加客户 -->
+        <Button
+            android:id="@+id/buttonCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_customer"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 客户列表 -->
+        <Button
+            android:id="@+id/buttonCustomerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_customer_list"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 服务项目管理 -->
+        <Button
+            android:id="@+id/buttonServiceList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_service"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:backgroundTint="#795548"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+    </LinearLayout>
+</ScrollView>

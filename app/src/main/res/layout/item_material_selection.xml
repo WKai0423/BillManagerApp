@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- 材料名称 -->
+    <TextView
+        android:id="@+id/textMaterialName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Material Name"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:lineSpacingExtra="4dp"
+        android:minWidth="80dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.3"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRemoveMaterial"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <!-- 减按钮 -->
+    <ImageButton
+        android:id="@+id/buttonRemoveMaterial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_previous"
+        android:contentDescription="减少"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/textMaterialName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- 数量 -->
+    <TextView
+        android:id="@+id/textMaterialQuantity"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonRemoveMaterial"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- 加按钮 -->
+    <ImageButton
+        android:id="@+id/buttonAddMaterial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_next"
+        android:contentDescription="增加"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/textMaterialQuantity"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- 总价 -->
+    <TextView
+        android:id="@+id/textMaterialTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RM 0.00"
+        android:textSize="16sp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@+id/buttonAddMaterial"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

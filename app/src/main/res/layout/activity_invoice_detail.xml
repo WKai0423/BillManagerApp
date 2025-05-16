@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/invoiceDetailScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/invoiceDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- 发票标题 -->
+        <TextView
+            android:id="@+id/textInvoiceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:text="INVOICE"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textInvoiceNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="INV000000_9999"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <!-- 日期 -->
+        <TextView
+            android:id="@+id/textInvoiceDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="日期：2025-05-08"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- 客户信息 -->
+        <TextView
+            android:id="@+id/textCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客户：张三"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textCustomerPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电话：12345678"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textCustomerAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="地址：XXXX路XX号"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- 服务项目列表 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="服务项目："
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layoutServiceItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:paddingLeft="16dp" />
+
+        <!-- 材料费用 -->
+<!--        <TextView-->
+<!--            android:id="@+id/textMaterialCost"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="4dp"-->
+<!--            android:text="材料费：RM 0.00"-->
+<!--            android:textColor="#000000"-->
+<!--            android:textSize="16sp" />-->
+
+        <!-- 总价 -->
+        <TextView
+            android:id="@+id/textTotalCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="总计：RM 0.00"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- 备注 -->
+        <TextView
+            android:id="@+id/textNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="备注：无"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <!-- 导出 PDF 按钮 -->
+        <Button
+            android:id="@+id/buttonExportPDF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="生成 PDF" />
+
+        <!-- 分享按钮 -->
+        <Button
+            android:id="@+id/buttonShareInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="分享" />
+
+        <!--编辑-->
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="编辑账单"/>
+
+    </LinearLayout>
+</ScrollView>

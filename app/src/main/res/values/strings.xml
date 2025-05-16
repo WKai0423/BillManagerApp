@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">账单助手</string>
+
+    <!--main-->
+    <string name="main_app_name">发票管理系统</string>
+    <string name="main_invoice">➕ 添加新账单</string>
+    <string name="btn_intent">📄 查看所有账单</string>
+    <string name="btn_customer">👤 添加客户</string>
+    <string name="main_customer_list">📋 客户列表</string>
+    <string name="main_service">🛠️ 服务项目管理</string>
+
+    <!--activity_invoice-->
+    <string name="et_date">账单日期 (如 2025–05–04)</string>
+    <string name="tv_customer">选择客户</string>
+    <string name="et_cnName">客户姓名</string>
+    <string name="et_cnPhone">客户电话</string>
+    <string name="et_cnAddress">客户地址</string>
+    <string name="btn_service">选择服务项目</string>
+    <string name="tv_service">未选择服务</string>
+    <string name="btn_material">添加材料</string>
+    <string name="tv_material">选择材料</string>
+    <string name="et_note">备注</string>
+    <string name="btn_save">保存账单</string>
+
+    <!--list-->
+    <string name="sv_invoice">搜索客户姓名或账单编号</string>
+    <string name="sv_customer">搜索客户姓名或电话号码</string>
+    <string name="btn_all_delete">清空</string>
+
+</resources>
