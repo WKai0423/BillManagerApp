@@ -253,8 +253,10 @@ public class InvoiceActivity extends AppCompatActivity implements View.OnClickLi
     //选项按钮
     private void showServiceSelectionDialog() {
         new Thread(() -> {
-            allServiceItems = DatabaseInstance.getDatabase(this).serviceItemDAO().getAll();
+
             ServiceItemDAO dao = DatabaseInstance.getDatabase(this).serviceItemDAO();
+            allServiceItems = DatabaseInstance.getDatabase(this).serviceItemDAO().getAll();
+
 
             //初始化
             if (dao.getAll().isEmpty()){
@@ -264,6 +266,7 @@ public class InvoiceActivity extends AppCompatActivity implements View.OnClickLi
             }
 
             runOnUiThread(() -> {
+
                 //1.  创建 RecyclerView 和 Adapter
                 RecyclerView recyclerView = new RecyclerView(this);
                 recyclerView.setLayoutManager(new LinearLayoutManager(this));
