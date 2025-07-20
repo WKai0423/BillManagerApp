@@ -23,6 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.billmanagerapp.R;
 import com.example.billmanagerapp.data.DatabaseInstance;
+import com.example.billmanagerapp.data.dp.ServiceItemDAO;
 import com.example.billmanagerapp.model.Customer;
 import com.example.billmanagerapp.model.Invoice;
 import com.example.billmanagerapp.model.MaterialItem;
@@ -253,6 +254,14 @@ public class InvoiceActivity extends AppCompatActivity implements View.OnClickLi
     private void showServiceSelectionDialog() {
         new Thread(() -> {
             allServiceItems = DatabaseInstance.getDatabase(this).serviceItemDAO().getAll();
+            ServiceItemDAO dao = DatabaseInstance.getDatabase(this).serviceItemDAO();
+
+            //初始化
+            if (dao.getAll().isEmpty()){
+                dao.insert(new ServiceItem("更换水龙头", 30.0));
+                dao.insert(new ServiceItem("安装马桶", 120.0));
+                dao.insert(new ServiceItem("水管维修", 50.0));
+            }
 
             runOnUiThread(() -> {
                 //1.  创建 RecyclerView 和 Adapter
@@ -265,6 +274,8 @@ public class InvoiceActivity extends AppCompatActivity implements View.OnClickLi
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("选择服务项目");
                 builder.setView(recyclerView);
+
+
                 builder.setPositiveButton("确定", (dialog, which) -> {
                     Map<ServiceItem, Integer> selectedMap = adapter.getSelectedItemsWithQuantity();
 
