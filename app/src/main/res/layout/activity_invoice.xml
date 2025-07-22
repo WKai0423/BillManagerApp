@@ -74,7 +74,9 @@
             android:layout_height="wrap_content"
             android:text="@string/tv_service"
             android:layout_marginTop="8dp"
-            android:padding="16dp"/>
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <Button
             android:id="@+id/buttonAddMaterial"

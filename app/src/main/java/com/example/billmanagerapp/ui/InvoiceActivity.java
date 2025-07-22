@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -79,6 +80,8 @@ public class InvoiceActivity extends AppCompatActivity implements View.OnClickLi
 
         tvsCustomer = findViewById(R.id.textViewSelectedCustomer);
 
+        textSelectedServices = findViewById(R.id.textSelectedServices);
+
 
         // 编辑或另外存账单
         Intent intent1 = getIntent();
@@ -141,6 +144,9 @@ public class InvoiceActivity extends AppCompatActivity implements View.OnClickLi
             Intent intent = new Intent(this, CustomerPickerActivity.class);
             launcher.launch(intent);
         });
+
+        //添加服务对话框
+        textSelectedServices.setOnClickListener(view -> serviceAddDialog());
 
         // 添加材料的按钮
         Button buttonAddMaterial = findViewById(R.id.buttonAddMaterial);
@@ -247,6 +253,42 @@ public class InvoiceActivity extends AppCompatActivity implements View.OnClickLi
             startActivity(intent);
             finish();
         }
+
+    }
+
+    //服务添加
+    private void serviceAddDialog(){
+        View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_add_service, null);
+        EditText serviceName = dialogView.findViewById(R.id.editServiceName);
+        EditText servicePrice = dialogView.findViewById(R.id.editServicePrice);
+
+        AlertDialog.Builder serviceAddBuilder = new AlertDialog.Builder(this);
+        serviceAddBuilder.setTitle("添加服务项目");
+        serviceAddBuilder.setView(dialogView);
+        serviceAddBuilder.setPositiveButton("保存", (dialog, which) -> {
+            String name = serviceName.getText().toString().trim();
+            String priceStr = servicePrice.getText().toString().trim();
+            //防空
+            if (name.isEmpty() || priceStr.isEmpty()){
+                Toast.makeText(this,"请输入服务项目和价格", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            double price;
+            try {
+                price = Double.parseDouble(priceStr);
+            }catch (Exception e){
+                Toast.makeText(this, "请输入正确的价格", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            ServiceItem item = new ServiceItem(name, price);
+            new Thread(() -> DatabaseInstance.getDatabase(this).serviceItemDAO().insert(item)).start();
+
+
+        });
+        serviceAddBuilder.setNegativeButton("取消", null);
+        serviceAddBuilder.show();
 
     }
 
